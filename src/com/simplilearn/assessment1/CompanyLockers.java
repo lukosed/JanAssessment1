@@ -16,7 +16,7 @@ public class CompanyLockers {
 	int a = 0;
 	int x;
 
-	void fileSearch() throws IOException {
+	private void fileSearch() throws IOException {
 
 		Scanner scan = new Scanner(System.in);
 		System.out.println("Enter the file to be searched.. ");
@@ -24,7 +24,7 @@ public class CompanyLockers {
 		findFile(name, new File("C:\\temp\\"));
 	}
 
-	public void findFile(String name, File file1) throws IOException {
+	private void findFile(String name, File file1) throws IOException {
 
 		File[] list = file1.listFiles();
 		if (list != null) {
@@ -49,7 +49,7 @@ public class CompanyLockers {
 
 	}
 
-	void fileNameDisp() {
+	private void fileNameDisp() {
 
 		File fileDir = new File("C:\\temp\\");
 		if (fileDir.isDirectory()) {
@@ -71,7 +71,7 @@ public class CompanyLockers {
 
 	}
 
-	void delteFile() {
+	private void delteFile() {
 		try {
 			String pp = "C:\\temp\\";
 			System.out.println("enter file name to delete");
@@ -97,7 +97,7 @@ public class CompanyLockers {
 		// System.out.println("Deletion successful.");
 	}
 
-	void fileCreate() {
+	private void fileCreate() {
 		String paath = "C:\\temp\\";
 		Scanner sc = new Scanner(System.in); // object of Scanner class
 		System.out.println(" ");
@@ -118,7 +118,7 @@ public class CompanyLockers {
 		}
 	}
 
-	void mainMenu() {
+	private void mainMenu() {
 		System.out.println(" ");
 		System.out.println(" ");
 		System.out.println(
@@ -135,7 +135,7 @@ public class CompanyLockers {
 
 	}
 
-	void mainMenuDisplay() {
+	private void mainMenuDisplay() {
 		System.out.println("");
 		System.out.println("		Please select the corresponding number from the following OPTIONS");
 		System.out.println("");
@@ -145,7 +145,7 @@ public class CompanyLockers {
 		System.out.println(" ");
 	}
 
-	void subDisplay() {
+	private void subDisplay() {
 		System.out.println(" ");
 		System.out.println("	Select from the following Options");
 		System.out.println("	1. Add File to Root Directory");
@@ -157,7 +157,7 @@ public class CompanyLockers {
 		System.out.println(" ");
 	}
 
-	void getInput() {
+	private void getInput() {
 		Scanner scan = new Scanner(System.in);
 		System.out.print("		Please Select From Options: ");
 		System.out.print(" ");
@@ -171,7 +171,7 @@ public class CompanyLockers {
 		}
 	}
 
-	void mainProcess() throws IOException {
+	private void mainProcess() throws IOException {
 		switch (x) {
 		case 1:
 
@@ -196,7 +196,7 @@ public class CompanyLockers {
 
 	}
 
-	void subProcess() throws IOException {
+	private void subProcess() throws IOException {
 		subDisplay();
 		getInput();
 		switch (x) {
@@ -225,13 +225,13 @@ public class CompanyLockers {
 
 	}
 
-	void exitpgm() {
+	private void exitpgm() {
 		System.out.println(" ");
 		System.out.println("			Thank you for using the service!!!");
 		java.lang.System.exit(0);
 	}
 
-	void warning() {
+	private void warning() {
 		System.out.println(" ");
 		System.out.println("<<<<<<<<<<Invalid Selection>>>>>>>>>>>>>");
 		System.out.println(" ");
